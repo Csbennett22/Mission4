@@ -23,6 +23,16 @@ namespace DateMe.Migrations
                 {
                     table.PrimaryKey("PK_Responses", x => x.ApplicationId);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Responses",
+                columns: new[] { "ApplicationId", "Age", "FirstName", "LastName", "Major", "PhoneNumber", "Stalker" },
+                values: new object[] { 1, (byte)32, "Michael", "Phelps", "Swimming", "123-456-7890", false });
+
+            migrationBuilder.InsertData(
+                table: "Responses",
+                columns: new[] { "ApplicationId", "Age", "FirstName", "LastName", "Major", "PhoneNumber", "Stalker" },
+                values: new object[] { 2, (byte)90, "Creed", "Bratton", null, "098-765-4321", true });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
