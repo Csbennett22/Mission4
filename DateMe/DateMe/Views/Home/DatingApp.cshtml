@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Dating Application";
+}
+@model DateMe.Models.ApplicationResponse
+    <!--bring in the model you're using-->
+
+<h1>Fill out an application</h1>
+
+<div>
+    <form method="post">
+        <label asp-for="FirstName">First Name:</label> <!-- by including asp-for in both of these, they work better as a pair-->
+        <input asp-for="FirstName" />
+        <br />
+
+        <label asp-for="LastName">Last Name:</label>
+        <input asp-for="LastName" />
+        <br />
+
+        <label asp-for="Age">Age:</label>
+        <input asp-for="Age" />
+        <br />
+
+        <label asp-for="PhoneNumber">Phone Number:</label>
+        <input asp-for="PhoneNumber" />
+        <br />
+
+        <label asp-for="Major">Major:</label>
+        <input asp-for="Major" />
+        <br />
+
+        <label asp-for="Stalker">Are you a stalker?</label>
+        <select asp-for="Stalker"> <!-- asp-for goes with the 'select' here, not with the options-->
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <br />
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>

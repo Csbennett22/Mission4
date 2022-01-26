@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Application Submitted!";
+}
+
+@model DateMe.Models.ApplicationResponse
+
+@if (Model.Stalker == true)
+{ 
+    <h2>Whoops! Looks like you need counseling!</h2>
+}
+else
+            {
+<h2>Application Received! Thank You @Model.FirstName</h2>
+            }
+
