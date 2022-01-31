@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Wait List";
+}
+
+@model List<ApplicationResponse>
+
+<table class="table table-bordered"> <!-- can use different table bootstraps to construct the table differently here-->
+
+    <thead class="font-weight-bold table-striped">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+            <td>Phone</td>
+            <td>Major</td>
+            <td>Stalker</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.FirstName</td>
+                    <td>@x.LastName</td>
+                    <td>@x.Age</td>
+                    <td>@x.PhoneNumber</td>
+                    <td>@x.Major.MajorName</td>
+                    <td>@x.Stalker</td>
+                </tr>
+            }
+    </tbody>
+</table>

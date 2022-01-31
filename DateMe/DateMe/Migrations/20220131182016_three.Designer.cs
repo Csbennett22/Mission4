@@ -2,14 +2,16 @@
 using DateMe.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DateMe.Migrations
 {
     [DbContext(typeof(DateApplicationContext))]
-    partial class DateApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220131182016_three")]
+    partial class three
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

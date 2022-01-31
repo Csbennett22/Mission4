@@ -1,24 +1,17 @@
 ﻿using DateMe.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using System.Threading.Tasks;
-
 namespace DateMe.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        private DateApplicationContext blahContext { get; set; }
+        private DateApplicationContext DateAppContext { get; set; }
 
-        public HomeController(ILogger<HomeController> logger, DateApplicationContext someName)
+        public HomeController(DateApplicationContext someName)
         {
-            _logger = logger;
-            blahContext = someName;
+            DateAppContext = someName;
         }
 
         public IActionResult Index()
@@ -28,25 +21,26 @@ namespace DateMe.Controllers
         [HttpGet]
         public IActionResult FillOutApplication ()
         {
+            ViewBag.Majors = DateAppContext.Majors.ToList();
             return View("DatingApp");
         }
         [HttpPost]
         public IActionResult FillOutApplication (ApplicationResponse ar)
         {
-            blahContext.Add(ar);
-            blahContext.SaveChanges();
+            DateAppContext.Add(ar);
+            DateAppContext.SaveChanges();
             return View("Confirmation", ar); // pass in the bundled up ar
         }
-
-        public IActionResult Privacy()
+        [HttpGet]
+        public IActionResult Waitlist()
         {
-            return View();
+            var applications = DateAppContext.Responses
+                .Include(x => x.Major) // also include the major object
+                .Where(x => x.Stalker == false) //c# uses double = sign
+                .OrderBy(x => x.LastName) // filtering the responses that are returned to the website
+                .ToList();
+            return View(applications);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

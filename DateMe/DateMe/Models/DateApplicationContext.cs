@@ -15,9 +15,19 @@ namespace DateMe.Models
         }
 
         public DbSet<ApplicationResponse> Responses { get; set; }
+        public DbSet<Major> Majors { get; set; }
 
+        // seeding the data
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            mb.Entity<Major>().HasData(
+                new Major { MajorId=1, MajorName="Information Systems"},
+                new Major { MajorId=2, MajorName= "Ancient Near Eastern Studies: Greek New Testament" },
+                new Major { MajorId = 3, MajorName = "Accounting" },
+                new Major { MajorId = 4, MajorName = "Spanish" },
+                new Major { MajorId = 5, MajorName = "Undeclared" }
+                );
+
             mb.Entity<ApplicationResponse>().HasData(
                 new ApplicationResponse
                 {
@@ -26,7 +36,7 @@ namespace DateMe.Models
                     LastName = "Phelps",
                     Age = 32,
                     PhoneNumber = "123-456-7890",
-                    Major = "Swimming",
+                    MajorId = 2,
                     Stalker = false
                 },
                 new ApplicationResponse
@@ -36,6 +46,7 @@ namespace DateMe.Models
                     LastName = "Bratton",
                     Age = 90,
                     PhoneNumber = "098-765-4321",
+                    MajorId = 5,
                     Stalker = true
                 }
                 );

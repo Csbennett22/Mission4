@@ -15,7 +15,9 @@ namespace DateMe.Models
         public string LastName { get; set; }
         public byte Age { get; set; }
         public string PhoneNumber { get; set; }
-        public string Major { get; set; }
         public bool Stalker { get; set; }
+        //build a foreign key relationship
+        public int MajorId { get; set; }
+        public Major Major { get; set; }
     }
 }

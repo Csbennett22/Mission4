@@ -23,10 +23,7 @@ C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Da
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\DateMe.TagHelpers.output.cache
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\DateMe.RazorCoreGenerate.cache
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\DateMe.RazorTargetAssemblyInfo.cache
@@ -79,3 +76,4 @@ C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\bin\Debug\netcoreapp3.1\ru
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\chris\Documents\IS413\Mission4\DateMe\DateMe\obj\Debug\netcoreapp3.1\Razor\Views\Home\Waitlist.cshtml.g.cs
