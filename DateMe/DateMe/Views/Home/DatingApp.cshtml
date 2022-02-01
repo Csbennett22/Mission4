@@ -9,6 +9,7 @@
 
 <div>
     <form method="post">
+        <div asp-validation-summary="All"></div> <!--return the errors in validation-->
         <label asp-for="FirstName">First Name:</label> <!-- by including asp-for in both of these, they work better as a pair-->
         <input asp-for="FirstName" />
         <br />

@@ -28,6 +28,9 @@
                     <td>@x.PhoneNumber</td>
                     <td>@x.Major.MajorName</td>
                     <td>@x.Stalker</td>
+
+                    <td><a asp-controller="Home" asp-action="Edit" asp-route-applicationid="@x.ApplicationId">Edit</a></td>
+                    <td><a asp-controller="Home" asp-action="Delete" asp-route-applicationid="@x.ApplicationId">Delete</a></td>
                 </tr>
             }
     </tbody>

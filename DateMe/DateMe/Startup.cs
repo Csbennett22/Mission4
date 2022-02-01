@@ -57,7 +57,7 @@ namespace DateMe
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}"); // this question mark means that its an optional parameter in the url
             });
         }
     }
